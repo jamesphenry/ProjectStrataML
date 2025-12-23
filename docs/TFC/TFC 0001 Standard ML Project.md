@@ -110,7 +110,7 @@ Linux-only support with detailed system requirements documented in:
 
 ## 7. Git LFS Configuration
 
-### 6.1 `.gitattributes`
+### 7.1 `.gitattributes`
 
 ```
 # Datasets
@@ -136,7 +136,7 @@ pruneoffsetdays = 3
 
 ---
 
-## 7. Directory Specifications
+## 8. Directory Specifications
 
 ### 7.1 `configs/` – Declarative Configuration
 

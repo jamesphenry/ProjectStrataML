@@ -1,7 +1,7 @@
 # TFC-0006: Repository Doctor and Validation Rules
 
 **Status:** Draft
-**Author:** Project Maintainers
+**Author:** James Henry (james.phenry@gmail.com)
 **Created:** 2025-12-23
 
 ---
