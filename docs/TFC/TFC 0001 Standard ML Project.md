@@ -56,7 +56,9 @@ This TFC proposes a **canonical repository contract** that:
 ```
 ml-project/
 ├── README.md
-├── pyproject.toml / requirements.txt
+├── requirements.txt
+├── requirements-dev.txt
+├── requirements-gpu.txt
 ├── .gitignore
 ├── .gitattributes
 ├── .lfsconfig
@@ -70,14 +72,43 @@ ml-project/
 ├── src/
 ├── spaces/
 ├── docs/
-└── tools/
+├── tools/
+└── environments/
+    └── system.yaml
 ```
 
 This layout is **mandatory** for all projects adopting this TFC.
 
 ---
 
-## 6. Git LFS Configuration
+## 6. Environment Management (TFC-0010)
+
+### 6.1 Dependency Files
+
+Three requirements files are **mandatory**:
+
+```
+requirements.txt          # Core ML and framework dependencies
+requirements-dev.txt      # Development and testing dependencies
+requirements-gpu.txt       # Optional GPU-enabled dependencies
+```
+
+### 6.2 Virtual Environment
+
+All development **MUST** use Python virtual environments:
+
+* Recommended directory: `.venv/`
+* Minimum Python version: 3.11+
+* Required packages specified in requirements files
+
+### 6.3 System Requirements
+
+Linux-only support with detailed system requirements documented in:
+`environments/system.yaml`
+
+---
+
+## 7. Git LFS Configuration
 
 ### 6.1 `.gitattributes`
 

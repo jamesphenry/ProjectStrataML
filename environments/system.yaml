@@ -1,0 +1,76 @@
+system_requirements:
+  operating_system:
+    supported:
+      - "Ubuntu 20.04+"
+      - "RHEL 8+"
+      - "CentOS Stream 8+"
+      - "Debian 11+"
+      - "Fedora 36+"
+    not_supported:
+      - "Windows"
+      - "macOS"  # May work but unsupported
+  
+  minimum_hardware:
+    ram_gb: 8
+    storage_gb: 50
+    cpu_cores: 2
+  
+  recommended_hardware:
+    ram_gb: 16
+    storage_gb: 100
+    cpu_cores: 4
+    gpu:
+      memory_gb: 8
+      cuda_version: "11.8+"
+      compute_capability: "6.0+"
+  
+  system_dependencies:
+    required:
+      git: ">=2.30"
+      git-lfs: ">=3.0"
+      python3: ">=3.11"
+      python3-venv: "any"
+    optional_gpu:
+      nvidia-driver: ">=525"
+      cuda-toolkit: ">=11.8"
+      libcudnn8: ">=8.7"
+  
+  package_managers:
+    ubuntu_debian:
+      install_cmd: "apt-get install -y"
+      update_cmd: "apt-get update"
+      packages:
+        - "git"
+        - "python3"
+        - "python3-pip"
+        - "python3-venv"
+        - "git-lfs"
+    
+    rhel_centos_fedora:
+      install_cmd: "dnf install -y"
+      update_cmd: "dnf update -y"
+      packages:
+        - "git"
+        - "python3"
+        - "python3-pip"
+        - "python3-venv"
+        - "git-lfs"
+      
+validation_rules:
+  python_version:
+    minimum: "3.11"
+    error_message: "Python 3.11+ is required"
+  
+  virtual_environment:
+    required: true
+    error_message: "Virtual environment is required"
+    allowed_paths: [".venv", "venv"]
+  
+  git_version:
+    minimum: "2.30"
+    error_message: "Git 2.30+ is required"
+  
+  git_lfs:
+    required: true
+    minimum: "3.0"
+    error_message: "Git LFS 3.0+ is required"
