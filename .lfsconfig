@@ -1,0 +1,15 @@
+# Git LFS Configuration for ProjectStrataML
+# This configures LFS settings for tracking large ML artifacts
+
+[lfs]
+    # Enable LFS tracking
+    url = "origin"
+    
+    # Default storage location for LFS objects (can be overridden)
+    # storage = "/path/to/lfs/storage"
+    
+    # Enable compression for LFS objects
+    # compression = true
+    
+    # Configure thread count for LFS operations
+    # threads = 8

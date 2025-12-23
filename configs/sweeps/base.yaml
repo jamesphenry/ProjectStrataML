@@ -1,0 +1,15 @@
+# Sweep configuration template
+sweep_name: ""
+experiment: ""
+parameters:
+  learning_rate:
+    min: 0.001
+    max: 0.01
+    type: "float"
+  batch_size:
+    values: [16, 32, 64]
+    type: "categorical"
+method: "grid"
+metric:
+  name: "val_loss"
+  goal: "minimize"

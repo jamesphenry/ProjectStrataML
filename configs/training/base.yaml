@@ -1,0 +1,14 @@
+# Training configuration
+experiment: ""
+model: ""
+dataset: ""
+seed: 42
+training:
+  epochs: 100
+  batch_size: 32
+  optimizer: "adam"
+  learning_rate: 0.001
+  scheduler: ""
+early_stopping:
+  patience: 10
+  monitor: "val_loss"
